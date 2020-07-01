@@ -51,6 +51,8 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+
+    private String type = "";
     //RecyclerView.LayoutManager layoutManager;
    // implements NavigationView.OnNavigationItemSelectedListener
 
@@ -58,6 +60,13 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
         protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+            Intent intent = getIntent();
+            Bundle bundle = intent.getExtras();
+            if (bundle != null)
+            {
+                type = getIntent().getExtras().get("Admin").toString();
+            }
 
         Paper.init(this);
 
@@ -70,9 +79,11 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
             public void onClick(View view)
             {
 
-                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                if (!type.equals("Admin")) {
+                    Intent intent = new Intent(HomeActivity.this, CartActivity.class);
 
-                startActivity(intent);
+                    startActivity(intent);
+                }
 
             }
         });
@@ -93,8 +104,11 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
         TextView userNameTextView = headerView.findViewById(R.id.user_profile_name);
         CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
 
-        userNameTextView.setText(Prevalent.currentOnlineUser.getName());
-        Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
+            if (!type.equals("Admin"))
+            {
+                userNameTextView.setText(Prevalent.currentOnlineUser.getName());
+                Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
+            }
 
             recyclerView = findViewById(R.id.recycler_menu);
             recyclerView.setHasFixedSize(true);
@@ -145,9 +159,18 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
                             @Override
                             public void onClick(View v) {
 
-                                Intent intent = new Intent(HomeActivity.this, ProductDetailsActivity.class);
-                                intent.putExtra( "pid", model.getPid());
-                                startActivity(intent);
+                                if (type.equals("Admin"))
+                                {
+                                    Intent intent = new Intent(HomeActivity.this, RetailerMaintainProductsActivity.class);
+                                    intent.putExtra("pid", model.getPid());
+                                    startActivity(intent);
+                                }
+                                else
+                                {
+                                    Intent intent = new Intent(HomeActivity.this, ProductDetailsActivity.class);
+                                    intent.putExtra("pid", model.getPid());
+                                    startActivity(intent);
+                                }
                             }
                         });
                     }
@@ -210,12 +233,19 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
         if (id == R.id.nav_cart)
         {
 
-        }
-        else if (id == R.id.nav_orders)
-        {
-            Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+            if (!type.equals("Admin")) {
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
 
-            startActivity(intent);
+                startActivity(intent);
+            }
+        }
+        else if (id == R.id.nav_search)
+        {
+            if (!type.equals("Admin")) {
+                Intent intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
+
+                startActivity(intent);
+            }
         }
         else if (id == R.id.nav_categories)
         {
@@ -224,17 +254,20 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
         else if (id == R.id.nav_settings)
         {
 
-            Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
-            startActivity(intent);
-
+            if (!type.equals("Admin")) {
+                Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
         }
         else if (id == R.id.nav_logout)
         {
-            Paper.book().destroy();
-            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
+            if (!type.equals("Admin")) {
+                Paper.book().destroy();
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

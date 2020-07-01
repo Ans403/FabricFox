@@ -14,7 +14,7 @@ public class RetailerCategoryActivity extends AppCompatActivity {
     private ImageView menPants, menJackets, skirts, tights;
     private ImageView frocks, bottoms, sweatShirts, dresses;
 
-    private Button LogOutBtn, CheckOrdersBtn;
+    private Button LogOutBtn, CheckOrdersBtn, maintainProductsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +34,21 @@ public class RetailerCategoryActivity extends AppCompatActivity {
         sweatShirts= (ImageView) findViewById(R.id.sweat_shirts);
         dresses= (ImageView) findViewById(R.id.dresses);
 
-        LogOutBtn = (Button) findViewById(R.id.retailer_logout_btn);
+        LogOutBtn = (Button) findViewById(R.id.admin_logout_btn);
         CheckOrdersBtn = (Button) findViewById(R.id.check_orders_btn);
+        maintainProductsBtn = (Button) findViewById(R.id.maintain_btn);
+
+
+
+        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(RetailerCategoryActivity.this, HomeActivity.class);
+                intent.putExtra("Admin", "Admin");
+                startActivity(intent);
+            }
+        });
 
         LogOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
