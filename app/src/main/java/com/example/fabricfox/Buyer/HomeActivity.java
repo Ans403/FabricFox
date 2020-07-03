@@ -1,4 +1,4 @@
-package com.example.fabricfox;
+package com.example.fabricfox.Buyer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.fabricfox.Prevalent.Prevalent;
+import com.example.fabricfox.R;
+import com.example.fabricfox.RetailerMaintainProductsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
@@ -31,13 +31,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener;
 
 import com.example.fabricfox.Model.Products;
-import com.example.fabricfox.Model.Users;
-import com.example.fabricfox.Prevalent.Prevalent;
 import com.example.fabricfox.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 

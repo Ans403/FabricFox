@@ -1,4 +1,4 @@
-package com.example.fabricfox;
+package com.example.fabricfox.Buyer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.fabricfox.Model.Products;
 import com.example.fabricfox.Prevalent.Prevalent;
+import com.example.fabricfox.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +20,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rey.material.widget.Button;
-import com.rey.material.widget.FloatingActionButton;
 import com.rey.material.widget.ImageView;
 import com.rey.material.widget.TextView;
 import com.squareup.picasso.Picasso;

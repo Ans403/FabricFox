@@ -1,4 +1,4 @@
-package com.example.fabricfox;
+package com.example.fabricfox.Buyer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.fabricfox.Model.Users;
 import com.example.fabricfox.Prevalent.Prevalent;
+import com.example.fabricfox.R;
+import com.example.fabricfox.RetailerCategoryActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

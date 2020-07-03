@@ -1,4 +1,4 @@
-package com.example.fabricfox;
+package com.example.fabricfox.Buyer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -17,8 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fabricfox.Model.Cart;
-import com.example.fabricfox.Model.Products;
 import com.example.fabricfox.Prevalent.Prevalent;
+import com.example.fabricfox.R;
 import com.example.fabricfox.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

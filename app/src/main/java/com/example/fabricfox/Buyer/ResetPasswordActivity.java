@@ -1,4 +1,4 @@
-package com.example.fabricfox;
+package com.example.fabricfox.Buyer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fabricfox.Prevalent.Prevalent;
+import com.example.fabricfox.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -22,7 +23,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.nio.channels.InterruptedByTimeoutException;
 import java.util.HashMap;
 
 public class ResetPasswordActivity extends AppCompatActivity {

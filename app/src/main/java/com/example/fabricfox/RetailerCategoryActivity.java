@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.fabricfox.Buyer.HomeActivity;
+import com.example.fabricfox.Buyer.MainActivity;
+
 public class RetailerCategoryActivity extends AppCompatActivity {
 
     private ImageView tShirts, sportsTShirts, femaleShirts, sweaters;
