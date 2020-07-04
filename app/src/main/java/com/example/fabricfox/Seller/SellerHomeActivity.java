@@ -1,26 +1,16 @@
 package com.example.fabricfox.Seller;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Switch;
 import android.widget.TextView;
 
-import com.example.fabricfox.Buyer.LoginActivity;
 import com.example.fabricfox.Buyer.MainActivity;
 import com.example.fabricfox.R;
-import com.example.fabricfox.SellerCategoryActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import java.time.Instant;
 
 public class SellerHomeActivity extends AppCompatActivity {
     private TextView mTextMassage;

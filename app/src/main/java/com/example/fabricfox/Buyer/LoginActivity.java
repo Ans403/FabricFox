@@ -13,10 +13,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fabricfox.AdminHomeActivity;
 import com.example.fabricfox.Model.Users;
 import com.example.fabricfox.Prevalent.Prevalent;
 import com.example.fabricfox.R;
-import com.example.fabricfox.SellerCategoryActivity;
+import com.example.fabricfox.Seller.SellerCategoryActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -145,10 +146,10 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             if(parentDbName.equals("Retailers"))
                             {
-                                Toast.makeText(LoginActivity.this, "Welcome Retailer, You are Logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Welcome Admin, You are Logged in Successfully...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(LoginActivity.this , SellerCategoryActivity.class);
+                                Intent intent = new Intent(LoginActivity.this , AdminHomeActivity.class);
                                 startActivity(intent);
                             }
                             else if(parentDbName.equals("Users"))

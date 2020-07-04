@@ -1,4 +1,4 @@
-package com.example.fabricfox;
+package com.example.fabricfox.Seller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.fabricfox.Seller.SellerAddNewProductActivity;
+import com.example.fabricfox.R;
 
 public class SellerCategoryActivity extends AppCompatActivity {
 
@@ -15,7 +15,6 @@ public class SellerCategoryActivity extends AppCompatActivity {
     private ImageView menPants, menJackets, skirts, tights;
     private ImageView frocks, bottoms, sweatShirts, dresses;
 
-    //private Button LogOutBtn, CheckOrdersBtn, maintainProductsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,43 +34,6 @@ public class SellerCategoryActivity extends AppCompatActivity {
         sweatShirts= (ImageView) findViewById(R.id.sweat_shirts);
         dresses= (ImageView) findViewById(R.id.dresses);
 
-//        LogOutBtn = (Button) findViewById(R.id.admin_logout_btn);
-//        CheckOrdersBtn = (Button) findViewById(R.id.check_orders_btn);
-//        maintainProductsBtn = (Button) findViewById(R.id.maintain_btn);
-//
-//
-//
-//        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view)
-//            {
-//                Intent intent = new Intent(RetailerCategoryActivity.this, HomeActivity.class);
-//                intent.putExtra("Admin", "Admin");
-//                startActivity(intent);
-//            }
-//        });
-//
-//        LogOutBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v)
-//            {
-//
-//                Intent intent = new Intent(RetailerCategoryActivity.this, MainActivity.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                startActivity(intent);
-//                finish();
-//
-//            }
-//        });
-//
-//        CheckOrdersBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                Intent intent = new Intent(RetailerCategoryActivity.this, RetailerNewOrdersActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
 
         tShirts.setOnClickListener(new View.OnClickListener() {
