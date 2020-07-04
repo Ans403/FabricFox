@@ -41,8 +41,8 @@
             android:name=".Buyer.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RetailerCategoryActivity" />
-        <activity android:name=".RetailerAddNewProductActivity" />
+        <activity android:name=".SellerCategoryActivity" />
+        <activity android:name=".Seller.SellerAddNewProductActivity" />
         <activity android:name=".Buyer.RegisterActivity" />
         <activity android:name=".Buyer.LoginActivity" />
         <activity android:name=".Buyer.MainActivity" >

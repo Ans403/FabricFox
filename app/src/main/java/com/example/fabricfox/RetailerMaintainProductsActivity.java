@@ -83,7 +83,7 @@ public class RetailerMaintainProductsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task)
             {
-                Intent intent = new Intent(RetailerMaintainProductsActivity.this, RetailerCategoryActivity.class);
+                Intent intent = new Intent(RetailerMaintainProductsActivity.this, SellerCategoryActivity.class);
                 startActivity(intent);
                 finish();
 
@@ -130,7 +130,7 @@ public class RetailerMaintainProductsActivity extends AppCompatActivity {
                     {
                         Toast.makeText(RetailerMaintainProductsActivity.this, "Changes applied successfully.", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(RetailerMaintainProductsActivity.this, RetailerCategoryActivity.class);
+                        Intent intent = new Intent(RetailerMaintainProductsActivity.this, SellerCategoryActivity.class);
                         startActivity(intent);
                         finish();
                     }
