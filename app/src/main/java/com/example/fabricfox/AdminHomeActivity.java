@@ -66,7 +66,7 @@ public class AdminHomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(AdminHomeActivity.this, RetailerNewOrdersActivity.class);
+                Intent intent = new Intent(AdminHomeActivity.this, CheckNewProductsActivity.class);
                 startActivity(intent);
             }
         });
